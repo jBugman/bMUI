@@ -2,7 +2,6 @@ MUI = {}
 
 local robotoFontRegular = 'Interface\\AddOns\\MUI\\fonts/Roboto-Regular.ttf'
 local robotoFontLight = 'Interface\\AddOns\\MUI\\fonts/Roboto-Light.ttf'
-local robotoFontThin = 'Interface\\AddOns\\MUI\\fonts/Roboto-Thin.ttf'
 
 function MUI.create_font(name, path, size)
   local f = CreateFont(name)
@@ -13,8 +12,8 @@ function MUI.create_font(name, path, size)
 end
 
 MUI.fonts = {}
-MUI.fonts.regular = MUI.create_font('Roboto13.font', robotoFontRegular, 13)
--- MUI.fonts.small = MUI.create_font('Roboto12.font', robotoFontRegular, 12)
+MUI.fonts.large = MUI.create_font('Roboto13.font', robotoFontRegular, 14)
+MUI.fonts.regular = MUI.create_font('Roboto12.font', robotoFontRegular, 12)
 MUI.fonts.light = MUI.create_font('RobotoLight13.font', robotoFontLight, 13)
 
 function MUI.skin_button(button)
@@ -29,12 +28,27 @@ for _, button in ipairs(menu_buttons) do
   MUI.skin_button(button)
 end
 
-GameFontNormalSmall:CopyFontObject(MUI.fonts.small)
+GameFontNormal:CopyFontObject(MUI.fonts.large)
+GameFontNormalSmall:CopyFontObject(MUI.fonts.regular)
+DialogButtonNormalText:CopyFontObject(MUI.fonts.regular)
 GameTooltipText:CopyFontObject(MUI.fonts.regular)
+-- Tooltip
+GameTooltipHeaderText:CopyFontObject(MUI.fonts.large)
 -- Chat
 ChatFontNormal:CopyFontObject(MUI.fonts.light)
 ChatFontSmall:CopyFontObject(MUI.fonts.light)
 -- ObjectiveTracker
+ObjectiveTrackerBlocksFrame.QuestHeader.Background:Hide()
+local quest_header = ObjectiveTrackerBlocksFrame.QuestHeader.Text
+quest_header:SetFont(MUI.fonts.large:GetFont())
+quest_header:SetTextColor(0.9, 0.9, 0.9, 0.7)
+quest_header:SetJustifyH('RIGHT')
+quest_header:SetPoint('TOPRIGHT', -8, -3)
+ObjectiveTrackerFrame.HeaderMenu.MinimizeButton:SetPoint('TOPRIGHT', 5, -4)
+ObjectiveTrackerFrame.HeaderMenu.Title:SetTextColor(0.9, 0.9, 0.9, 0.7)
+ObjectiveTrackerFrame.HeaderMenu.Title:SetJustifyH('RIGHT')
+ObjectiveTrackerFrame.HeaderMenu.Title:SetPoint('TOPRIGHT', -18, -4)
+-- TODO: ObjectiveTrackerBlocksFrameHeader? HeaderText? :SetTextColor
 ObjectiveFont:CopyFontObject(MUI.fonts.light)
 GameFontNormalMed2:CopyFontObject(MUI.fonts.light)
 
