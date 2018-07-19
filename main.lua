@@ -1,7 +1,7 @@
 local MUI = {}
 
-local robotoFontRegular = 'Interface\\AddOns\\MUI\\fonts/Roboto-Regular.ttf'
-local robotoFontLight = 'Interface\\AddOns\\MUI\\fonts/Roboto-Light.ttf'
+local robotoFontRegular = 'Interface\\AddOns\\bMUI\\fonts/Roboto-Regular.ttf'
+local robotoFontLight = 'Interface\\AddOns\\bMUI\\fonts/Roboto-Light.ttf'
 
 function MUI.create_font(name, path, size)
   local f = CreateFont(name)
@@ -12,8 +12,8 @@ function MUI.create_font(name, path, size)
 end
 
 MUI.fonts = {}
-MUI.fonts.large = MUI.create_font('Roboto13.font', robotoFontRegular, 14)
-MUI.fonts.regular = MUI.create_font('Roboto12.font', robotoFontRegular, 12)
+MUI.fonts.large = MUI.create_font('RobotoRegular14.font', robotoFontRegular, 14)
+MUI.fonts.regular = MUI.create_font('RobotoRegular12.font', robotoFontRegular, 12)
 MUI.fonts.light = MUI.create_font('RobotoLight13.font', robotoFontLight, 13)
 
 function MUI.skin_button(button)

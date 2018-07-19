@@ -1,6 +1,7 @@
 ## Interface: 80000
 ## Title: bMUI
-## Version: 0.1.1
+## Notes: MUI assets 
+## Version: 0.1.2
 ## Author: jBugman
 
 ## OptionalDeps: MoveAnything
