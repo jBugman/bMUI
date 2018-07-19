@@ -52,6 +52,6 @@ ObjectiveTrackerFrame.HeaderMenu.Title:SetPoint('TOPRIGHT', -18, -4)
 ObjectiveFont:CopyFontObject(MUI.fonts.light)
 GameFontNormalMed2:CopyFontObject(MUI.fonts.light)
 
-bugMUI = MUI -- export
+bMUI = MUI -- export
 
-print("MUI initalized")
+print("bMUI initalized")
