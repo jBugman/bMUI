@@ -1,9 +1,11 @@
 ## Interface: 80000
-## Title: bMUI
-## Notes: MUI assets 
-## Version: 0.1.2
+## Title: |cFFFF7419b|rMUI
+## Notes: bMUI media and minor tweaks
+## Version: 0.2.0
 ## Author: jBugman
 
-## OptionalDeps: MoveAnything
+## OptionalDeps: LibStub, LibSharedMedia-3.0, MoveAnything
+
+lib\libs.xml
 
 main.lua
